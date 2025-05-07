@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -125,6 +127,41 @@
       font-weight: 400;
     }
 
+    .services-section {
+      background: #111;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .services-section p {
+      color: #aaa;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .service-box {
+      background: var(--color-accent);
+      color: #000;
+      padding: 2rem;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      width: 220px;
+      text-align: center;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -160,9 +197,20 @@
     </div>
   </section>
 
+  <section class="services-section">
+    <div class="badge">Servicios</div>
+    <h2>Soluciones web a medida</h2>
+    <p>Conocé nuestras opciones y encontrá el sitio perfecto para impulsar tu marca y cumplir tus objetivos.</p>
+    <div class="services-grid">
+      <div class="service-box">Landing Page</div>
+      <div class="service-box">Web Institucional</div>
+      <div class="service-box">Tienda Online</div>
+      <div class="service-box">Servicio de mantenimiento</div>
+    </div>
+  </section>
+
   <footer>
     © 2025 Lado Positivo · Todos los derechos reservados.
   </footer>
 </body>
 </html>
-
