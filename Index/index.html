@@ -5,234 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lado Positivo</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --color-bg: #000000;
-      --color-text: #ffffff;
-      --color-accent: #33b2a4;
-      --font-main: 'Montserrat', sans-serif;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      font-family: var(--font-main);
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-    }
-    header nav a {
-      margin-left: 1.5rem;
-      color: var(--color-text);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .hero-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-      gap: 2rem;
-    }
-    .hero-text {
-      flex: 1 1 500px;
-    }
-    .hero-text h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-    }
-    .hero-text h1 span {
-      color: var(--color-accent);
-    }
-    .hero-text p {
-      margin-top: 1.5rem;
-      color: #ccc;
-      font-size: 1rem;
-    }
-    .hero-btn {
-      margin-top: 2rem;
-      background: var(--color-accent);
-      color: #000;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
-    }
-    .hero-image {
-      flex: 1 1 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .hero-image img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .badge {
-      display: inline-block;
-      background: #1a1a1a;
-      color: #fff;
-      padding: 0.4rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      margin-bottom: 1rem;
-    }
-    .stat-boxes {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .stat {
-      background: #111;
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      color: var(--color-accent);
-      font-weight: 700;
-    }
-    .stat span {
-      display: block;
-      font-size: 0.9rem;
-      color: #ccc;
-      font-weight: 400;
-    }
-    .services-section {
-      background: #111;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .services-section h2 {
-      font-size: 2rem;
-      font-weight: 800;
-    }
-    .services-section p {
-      color: #aaa;
-      margin-top: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .service-box {
-      background: var(--color-accent);
-      color: #000;
-      padding: 2rem;
-      border-radius: 25px;
-      font-weight: 700;
-      font-size: 1.25rem;
-      width: 220px;
-      text-align: center;
-    }
-    .tarjeta-servicio {
-      display: flex;
-      flex-wrap: wrap;
-      background: #111;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 3rem auto;
-      border-radius: 20px;
-      align-items: center;
-      gap: 2rem;
-    }
-    .tarjeta-servicio img {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 12px;
-    }
-    .tarjeta-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .tarjeta-info h3 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-    .tarjeta-info p {
-      color: #ccc;
-      margin-bottom: 1rem;
-    }
-    .beneficios {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background: #000;
-      border-radius: 20px;
-      margin: 1rem 0;
-      padding: 1rem;
-    }
-    .beneficio {
-      flex: 1 1 30%;
-      text-align: center;
-    }
-    .beneficio h4 {
-      color: var(--color-accent);
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
-    .beneficio p {
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-    .tarjeta-descripcion {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-    .tarjeta-descripcion p {
-      flex: 1 1 70%;
-      color: #ccc;
-    }
-    .tarjeta-descripcion button {
-      background: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.875rem;
-      color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="../Style/style.css">
+
 </head>
 <body>
   <header>
-    <div><strong>Lado Positivo</strong></div>
+    <div class="logo-container">
+      <img src="../img/logo.png" alt="Logo Lado Positivo" class="logo">
+      <strong>Lado Positivo</strong>
+    </div>
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Servicios</a>
-      <a href="#">Portfolio</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
+  
 
   <section class="hero-section">
     <div class="hero-text">
       <div class="badge">+20 Reviews positivas</div>
       <h1>Diseñamos <span>sitios web</span> que conectan con <span>tus clientes</span></h1>
       <p>Construimos experiencias digitales personalizadas que reflejan la esencia de tu marca y cautivan a tus usuarios.</p>
-      <button class="hero-btn">Conocé nuestros servicios →</button>
+      <button class="hero-btn" onclick="location.href='#servicios'">Conocé nuestros servicios →</button>
     </div>
     <div class="hero-image">
       <img src="hero-image-placeholder.jpg" alt="Diseño Web en acción">
@@ -243,219 +39,258 @@
     </div>
   </section>
 
-  <section class="services-section">
+  <section id="servicios" class="services-section">
     <div class="badge">Servicios</div>
     <h2>Soluciones web a medida</h2>
     <p>Conocé nuestras opciones y encontrá el sitio perfecto para impulsar tu marca y cumplir tus objetivos.</p>
     <div class="services-grid">
-      <div class="service-box">Landing Page</div>
-      <div class="service-box">Web Institucional</div>
-      <div class="service-box">Tienda Online</div>
-      <div class="service-box">Servicio de mantenimiento</div>
+        <div class="service-box">
+            <h3>Landing Page</h3>
+            <p>Captura la atención de tus clientes con páginas enfocadas en conversiones rápidas.</p>
+        </div>
+        <div class="service-box">
+            <h3>Web Institucional</h3>
+            <p>Refuerza tu presencia online con un sitio profesional y bien estructurado.</p>
+        </div>
+        <div class="service-box">
+            <h3>Tienda Online</h3>
+            <p>Facilita la venta de productos con una experiencia de compra intuitiva.</p>
+        </div>
+        <div class="service-box">
+            <h3>Servicio de mantenimiento</h3>
+            <p>Mantén tu web actualizada y segura con monitoreo constante.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="tarjeta-servicio">
-    <img src="landing-page.jpg" alt="Ejemplo Landing Page">
-    <div class="tarjeta-info">
-      <h3>🏆 Landing Page</h3>
-      <p>Atraé y convertí visitas en leads con una landing page enfocada en resultados, diseñada para captar la atención y llevar al usuario a la acción.</p>
-      <div class="beneficios">
-        <div class="beneficio">
-          <h4>Secciones</h4>
+
+<section class="tarjeta-servicio">
+  <div class="tarjeta-header">
+      <img src="../img/landing-page.jpg" alt="Ejemplo Landing Page" class="tarjeta-imagen">
+      <div class="tarjeta-titulo">
+          <h3>🏆 Landing Page</h3>
+          <p>Atraé y convertí visitas en leads con una landing page enfocada en resultados, diseñada para captar la atención y llevar al usuario a la acción.</p>
+      </div>
+  </div>
+
+  <div class="caracteristicas-servicio">
+      <div class="caracteristica">
+          <span>Secciones</span>
           <p>Estructura directa</p>
-        </div>
-        <div class="beneficio">
-          <h4>Conversión</h4>
+      </div>
+      <div class="caracteristica">
+          <span>Conversión</span>
           <p>Diseño que atrae</p>
-        </div>
-        <div class="beneficio">
-          <h4>Rapidez</h4>
+      </div>
+      <div class="caracteristica">
+          <span>Rapidez</span>
           <p>Carga optimizada</p>
-        </div>
       </div>
-      <div class="tarjeta-descripcion">
-        <p>Ideal para campañas de marketing, landing page que convierte visitantes en clientes potenciales con diseño cautivador y contenido optimizado para la conversión.</p>
-        <button>¡Me interesa! →</button>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <section class="tarjeta-servicio">
-    <div class="tarjeta-info">
-      <h3>📈 Web Institucional</h3>
-      <p>Potenciá la imagen de tu negocio con una web que inspire confianza, refleje la identidad de tu marca y conecte con tu audiencia.</p>
-      <div class="beneficios">
-        <div class="beneficio">
-          <h4>Secciones</h4>
-          <p>De 5 a 10 páginas</p>
-        </div>
-        <div class="beneficio">
-          <h4>Imágen</h4>
-          <p>Presencia profesional</p>
-        </div>
-        <div class="beneficio">
-          <h4>Contacto</h4>
-          <p>Conexión directa</p>
-        </div>
+  <div class="tarjeta-descripcion">
+      <p>Ideal para campañas de marketing, landing page que convierte visitantes en clientes potenciales con diseño cautivador y contenido optimizado para la conversión.</p>
+      <button class="interest-btn">¡Me interesa! →</button>
+  </div>
+
+  <div class="detalles-adicionales">
+      <div class="detalle">
+          <h4>📅 ¿Tiempo previsto?</h4>
+          <p>Varia según la complejidad del proyecto, normalmente de 2 a 3 semanas.</p>
       </div>
-    </div>
-    <img src="web-institucional.jpg" alt="Ejemplo Web Institucional">
-  </section>
- 
-  <section class="tarjeta-servicio">
-    <img src="tienda-online.jpg" alt="Ejemplo Tienda Online">
-    <div class="tarjeta-info">
-      <h3>🛒 Tienda online</h3>
-      <p>Facilitá el proceso de compra con una tienda online que invite a tus clientes a explorar productos, agregar al carrito y completar su compra con comodidad.</p>
-      <div class="beneficios">
-        <div class="beneficio">
-          <h4>Productos</h4>
-          <p>Catálogo ordenado</p>
-        </div>
-        <div class="beneficio">
-          <h4>Pagos</h4>
-          <p>Transacciones seguras</p>
-        </div>
-        <div class="beneficio">
-          <h4>Envíos</h4>
-          <p>Opciones flexibles</p>
-        </div>
+      <div class="detalle">
+          <h4>📈 ¿En qué se enfoca?</h4>
+          <p>Captura leads y convierte visitantes en clientes.</p>
       </div>
-      <div class="tarjeta-descripcion">
-        <button>¡Me interesa! →</button>
+      <div class="detalle">
+          <h4>🔧 ¿Qué incluye?</h4>
+          <p>Análisis de competencia, diseño UX/UI, certificado SSL y más.</p>
       </div>
-    </div>
-  </section>
-  <section class="tarjeta-servicio">
-    <div class="tarjeta-info">
-      <h3>🛠️ Servicio de mantenimiento</h3>
-      <p>Aseguramos el buen funcionamiento y la seguridad de tu página, con un mantenimiento constante que evita problemas y mantiene tu web al día.</p>
-      <div class="beneficios">
-        <div class="beneficio">
-          <h4>¿Qué duración tiene?</h4>
-          <p>Realizamos un mantenimiento mensual de tu sitio.</p>
-        </div>
-        <div class="beneficio">
-          <h4>¿Qué incluye?</h4>
-          <p>Backups, actualización de plugins, certificación de seguridad y mucho más.</p>
-        </div>
-        <div class="beneficio">
-          <h4>¿Es importante?</h4>
-          <p>Sí, mantiene tu web segura y optimizada, asegurando la mejor experiencia para tus usuarios.</p>
-        </div>
+  </div>
+</section>
+
+<section class="tarjeta-servicio">
+  <div class="tarjeta-header">
+      <div class="tarjeta-titulo">
+          <h3>📈 Web Institucional</h3>
+          <p>Potenciá la imagen de tu negocio con una web que inspire confianza, refleje la identidad de tu marca y conecte con tu audiencia.</p>
       </div>
-      <div class="tarjeta-descripcion">
-        <button>¡Me interesa! →</button>
+      <img src="../img/web-institucional.jpg" alt="Ejemplo Web Institucional" class="tarjeta-imagen">
+  </div>
+
+  <div class="caracteristicas-contenido">
+      <div class="caracteristicas-servicio">
+          <div class="caracteristica">
+              <span>Secciones</span>
+              <p>De 5 a 10 páginas</p>
+          </div>
+          <div class="caracteristica">
+              <span>Imagen</span>
+              <p>Presencia profesional</p>
+          </div>
+          <div class="caracteristica">
+              <span>Contacto</span>
+              <p>Conexión directa</p>
+          </div>
       </div>
-    </div>
-  </section>
-  <style>
-    section.como-trabajamos {
-      background-color: #33b2a4;
-      color: #222f3c;
-      padding: 80px 40px;
-      text-align: center;
-    }
-    section.como-trabajamos h2 {
-      font-size: 1rem;
-      background-color: #222f3c;
-      color: #33b2a4;
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-    section.como-trabajamos h3 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-    section.como-trabajamos p {
-      max-width: 800px;
-      margin: 0 auto 40px auto;
-      font-size: 1.1rem;
-    }
-    .etapas {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-    .etapa {
-      background-color: #fff;
-      color: #222f3c;
-      padding: 24px;
-      border-radius: 20px;
-      max-width: 320px;
-      flex: 1 1 280px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      text-align: left;
-    }
-    .etapa h4 {
-      font-size: 0.9rem;
-      font-weight: bold;
-      margin-bottom: 4px;
-      opacity: 0.7;
-    }
-    .etapa h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-    .etapa p {
-      font-size: 1rem;
-    }
-    .cta-final h3 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-    .cta-final strong span {
-      color: #222f3c;
-    }
-    .boton-cta {
-      background-color: #222f3c;
-      color: #fff;
-      padding: 14px 28px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-  </style>
-  
-  <section class="como-trabajamos">
-    <h2>🔌 ¿Cómo trabajamos?</h2>
-    <h3>Al mejor estilo Lado Positivo</h3>
-    <p>Cada proyecto sigue un proceso claro y estructurado para asegurar que el resultado final supere tus expectativas.</p>
-    <div class="etapas">
+  </div>
+
+  <div class="tarjeta-descripcion">
+      <p>Una web institucional ofrece una presencia profesional en línea, destacando los valores y servicios de tu empresa mientras facilita el contacto directo con tus clientes.</p>
+  </div>
+
+  <div class="detalles-adicionales">
+      <div class="detalle">
+          <h4>📅 ¿Tiempo previsto?</h4>
+          <p>De 3 a 4 semanas, según la complejidad.</p>
+      </div>
+      <div class="detalle">
+          <h4>🌐 ¿En qué se enfoca?</h4>
+          <p>Proyectar confianza y profesionalismo.</p>
+      </div>
+      <div class="detalle">
+          <h4>🔧 ¿Qué incluye?</h4>
+          <p>Diseño personalizado, integración de contacto y optimización SEO.</p>
+      </div>
+  </div>
+
+  <!-- Botón dentro de su propio contenedor -->
+  <div class="tarjeta-accion">
+      <button class="interest-btn">¡Me interesa! →</button>
+  </div>
+</section>
+
+<section class="tarjeta-servicio">
+  <div class="tarjeta-header">
+      <img src="img/tienda-online.jpg" alt="Ejemplo Tienda Online" class="tarjeta-imagen">
+      <div class="tarjeta-titulo">
+          <h3>🛒 Tienda Online</h3>
+          <p>Ofrecé una experiencia de compra fácil y atractiva para que tus clientes puedan navegar, comprar y pagar en línea, con soporte en cada paso.</p>
+      </div>
+  </div>
+  <div class="caracteristicas-servicio">
+      <div class="caracteristica">
+          <span>Productos</span>
+          Catálogo ordenado
+      </div>
+      <div class="caracteristica">
+          <span>Pagos</span>
+          Transacciones seguras
+      </div>
+      <div class="caracteristica">
+          <span>Envíos</span>
+          Opciones flexibles
+      </div>
+  </div>
+  <div class="tarjeta-descripcion">
+      <p>Una tienda online facilita la compra de productos con una experiencia amigable y segura, integrando carrito de compras y opciones de pago eficientes.</p>
+      <button class="interest-btn">¡Me interesa! →</button>
+  </div>
+  <div class="detalles-adicionales">
+      <div class="detalle">
+          <h4>🕰️ ¿Tiempo previsto?</h4>
+          <p>De 4 a 6 semanas, dependiendo de la complejidad.</p>
+      </div>
+      <div class="detalle">
+          <h4>🚩 ¿En qué se enfoca?</h4>
+          <p>Permitir a los clientes comprar productos de manera rápida y segura.</p>
+      </div>
+      <div class="detalle">
+          <h4>📦 ¿Qué incluye?</h4>
+          <p>Catálogo, carrito de compras, integración con envíos y más.</p>
+      </div>
+  </div>
+</section>
+
+<section class="tarjeta-servicio">
+  <div class="tarjeta-header">
+      <img src="img/servicio-mantenimiento.jpg" alt="Ejemplo Servicio de Mantenimiento" class="tarjeta-imagen">
+      <div class="tarjeta-titulo">
+          <h3>🔧 Servicio de Mantenimiento</h3>
+          <p>Aseguramos el buen funcionamiento y la seguridad de tu página, con un mantenimiento constante que evita problemas y mantiene tu web al día.</p>
+      </div>
+  </div>
+  <div class="caracteristicas-servicio">
+      <div class="caracteristica">
+          <span>¿Qué duración tiene?</span>
+          Realizamos un mantenimiento mensual de tu sitio.
+      </div>
+      <div class="caracteristica">
+          <span>¿Qué incluye?</span>
+          Backups, actualización de plugins, certificación de seguridad y mucho más.
+      </div>
+      <div class="caracteristica">
+          <span>¿Es importante?</span>
+          Sí, mantiene tu web segura y optimizada, asegurando la mejor experiencia para tus usuarios.
+      </div>
+  </div>
+  <div class="tarjeta-descripcion">
+      <p>El mantenimiento web garantiza la estabilidad y el rendimiento continuo de tu sitio, protegiéndolo de vulnerabilidades y errores.</p>
+      <button class="interest-btn">¡Me interesa! →</button>
+  </div>
+</section>
+
+
+<section class="como-trabajamos">
+  <h2>¿Cómo trabajamos?</h2>
+  <p>Al mejor estilo Lado Positivo</p>
+  <div class="etapas">
       <div class="etapa">
-        <h4>Etapa 01</h4>
-        <h3>📝 Estrategia y planificación</h3>
-        <p>Conocemos tus metas, exploramos tu marca y planificamos la web ideal para tu negocio, alineada a tus valores y personalidad.</p>
+          <h3>Etapa 01</h3>
+          <h4>📝 Estrategia y planificación</h4>
+          <p>Conocemos tus metas, exploramos tu marca y planificamos la web ideal para tu negocio, alineada a tus valores y personalidad.</p>
       </div>
       <div class="etapa">
-        <h4>Etapa 02</h4>
-        <h3>💬 Comunicación y diseño</h3>
-        <p>Desarrollamos una comunicación clara, un diseño atractivo con un prototipo interactivo para validar ideas.</p>
+          <h3>Etapa 02</h3>
+          <h4>💬 Comunicación y diseño</h4>
+          <p>Desarrollamos una comunicación clara, un diseño atractivo con un prototipo interactivo para validar ideas.</p>
       </div>
       <div class="etapa">
-        <h4>Etapa 03</h4>
-        <h3>🚀 Desarrollo y lanzamiento</h3>
-        <p>Aplicamos ajustes finales, desarrollamos tu web y la lanzamos asegurando funcionalidad y éxito.</p>
+          <h3>Etapa 03</h3>
+          <h4>🚀 Desarrollo y lanzamiento</h4>
+          <p>Aplicamos ajustes finales, desarrollamos tu web y la lanzamos asegurando funcionalidad y éxito.</p>
       </div>
-    </div>
-    <div class="cta-final">
-      <h3>¿Qué estás esperando?<br><strong>Demos el siguiente paso… <span>¡Juntos!</span></strong></h3>
+  </div>
+  <div class="cta-final">
+      <h3>¿Qué estás esperando? Demos el siguiente paso... ¡Juntos!</h3>
       <button class="boton-cta">Empezá tu proyecto →</button>
-    </div>
-  </section>
-  
-  
+  </div>
+</section>
+
+<section class="contacto">
+  <div class="contacto-header">
+      <h2>📞 Hablemos sobre tu proyecto</h2>
+      <p>Completa tus datos y dejá tu consulta. ¡Estamos listos para ayudarte a llevar tus ideas a la realidad!</p>
+  </div>
+  <div class="contacto-formulario">
+      <form action="#" method="post">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Número Celular">
+          <select required>
+              <option value="" disabled selected>Elegí el servicio que deseas</option>
+              <option value="landing">Landing Page</option>
+              <option value="web-institucional">Web Institucional</option>
+              <option value="tienda-online">Tienda Online</option>
+              <option value="mantenimiento">Mantenimiento</option>
+          </select>
+          <textarea placeholder="Mensaje" rows="4" required></textarea>
+          <div class="terminos">
+              <input type="checkbox" required>
+              <label>Acepto Términos y Condiciones</label>
+          </div>
+          <button class="contacto-btn">Enviar mensaje</button>
+      </form>
+  </div>
+</section>
+
 
   <footer>
     © 2025 Lado Positivo · Todos los derechos reservados.
   </footer>
+  <a href="https://wa.me/5491173690011" class="whatsapp-btn" target="_blank" title="Contactar por WhatsApp">
+    <img src="../img/logo-wp.png" alt="WhatsApp" class="whatsapp-icon">
+  </a>  
+  
 </body>
 </html>
