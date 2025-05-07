@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lado Positivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #000000;
+      --color-text: #ffffff;
+      --color-accent: #33b2a4;
+      --font-main: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-main);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: var(--color-bg);
+    }
+
+    header nav a {
+      margin-left: 1.5rem;
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      flex: 1 1 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .hero-text h1 span {
+      color: var(--color-accent);
+    }
+
+    .hero-text p {
+      margin-top: 1.5rem;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .hero-btn {
+      margin-top: 2rem;
+      background: var(--color-accent);
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .stat-boxes {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: #111;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 0.9rem;
+      color: #ccc;
+      font-weight: 400;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.875rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Lado Positivo</strong></div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Servicios</a>
+      <a href="#">Portfolio</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-text">
+      <div class="badge">+20 Reviews positivas</div>
+      <h1>Diseñamos <span>sitios web</span> que conectan con <span>tus clientes</span></h1>
+      <p>Construimos experiencias digitales personalizadas que reflejan la esencia de tu marca y cautivan a tus usuarios.</p>
+      <button class="hero-btn">Conocé nuestros servicios →</button>
+    </div>
+    <div class="hero-image">
+      <img src="hero-image-placeholder.jpg" alt="Diseño Web en acción">
+      <div class="stat-boxes">
+        <div class="stat">+30 <span>Proyectos Completados</span></div>
+        <div class="stat">+25 <span>Clientes Satisfechos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Lado Positivo · Todos los derechos reservados.
+  </footer>
+</body>
+</html>
+
