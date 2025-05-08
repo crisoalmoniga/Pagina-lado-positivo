@@ -260,30 +260,31 @@
   <!-- Contacto -->
   <section id="contacto" class="contacto">
     <div class="contacto-header">
-      <h2>📞 Hablemos sobre tu proyecto</h2>
-      <p>Completa tus datos y dejá tu consulta. ¡Estamos listos para ayudarte a llevar tus ideas a la realidad!</p>
+        <h2>📞 Hablemos sobre tu proyecto</h2>
+        <p>Completa tus datos y dejá tu consulta. ¡Estamos listos para ayudarte a llevar tus ideas a la realidad!</p>
     </div>
     <div class="contacto-formulario">
-      <form action="#" method="post">
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Número Celular">
-        <select required>
-          <option value="" disabled selected>Elegí el servicio que deseas</option>
-          <option value="landing">Landing Page</option>
-          <option value="web-institucional">Web Institucional</option>
-          <option value="tienda-online">Tienda Online</option>
-          <option value="mantenimiento">Mantenimiento</option>
-        </select>
-        <textarea placeholder="Mensaje" rows="4" required></textarea>
-        <div class="terminos">
-          <input type="checkbox" required>
-          <label>Acepto Términos y Condiciones</label>
-        </div>
-        <button class="contacto-btn">Enviar mensaje</button>
-      </form>
+        <form action="enviar.php" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="telefono" placeholder="Número Celular">
+            <select name="servicio" required>
+                <option value="" disabled selected>Elegí el servicio que deseas</option>
+                <option value="landing">Landing Page</option>
+                <option value="web-institucional">Web Institucional</option>
+                <option value="tienda-online">Tienda Online</option>
+                <option value="mantenimiento">Mantenimiento</option>
+            </select>
+            <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+            <div class="terminos">
+                <input type="checkbox" required>
+                <label>Acepto Términos y Condiciones</label>
+            </div>
+            <button class="contacto-btn" type="submit">Enviar mensaje</button>
+        </form>
+        
     </div>
-  </section>
+</section>
 
   <!-- Footer -->
   <footer>
