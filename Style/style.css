@@ -737,3 +737,22 @@ section.como-trabajamos {
 .contacto select:focus {
     outline: 2px solid var(--color-accent);
 }
+
+.mensaje {
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.mensaje.oculto {
+    display: none;
+}
+
+#mensaje-error {
+    background-color: #f44336;
+}

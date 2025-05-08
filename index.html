@@ -284,6 +284,26 @@
         </form>
         
     </div>
+
+    <div id="mensaje-exito" class="mensaje oculto">
+        ¡Mensaje enviado con éxito!
+    </div>
+    <div id="mensaje-error" class="mensaje oculto">
+        Hubo un problema al enviar el mensaje. Inténtalo nuevamente.
+    </div>
+    
+    <script>
+        // Mostrar el mensaje según el parámetro en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+    
+        if (status === 'success') {
+            document.getElementById('mensaje-exito').classList.remove('oculto');
+        } else if (status === 'error') {
+            document.getElementById('mensaje-error').classList.remove('oculto');
+        }
+    </script>
+
 </section>
 
   <!-- Footer -->

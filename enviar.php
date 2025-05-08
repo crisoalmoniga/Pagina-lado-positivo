@@ -1,22 +1,28 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = htmlspecialchars($_POST["nombre"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $telefono = htmlspecialchars($_POST["telefono"]);
-    $servicio = htmlspecialchars($_POST["servicio"]);
-    $mensaje = htmlspecialchars($_POST["mensaje"]);
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $celular = $_POST['celular'];
+    $servicio = $_POST['servicio'];
+    $mensaje = $_POST['mensaje'];
+    $para = "contacto@ladopositivo.com.ar"; // Reemplaza con tu correo real
+    $asunto = "Nuevo mensaje de contacto desde Lado Positivo";
 
-    // Configuración del correo
-    $to = "contacto@ladopositivo.com.ar";  // Reemplaza con tu dirección de correo
-    $subject = "Nuevo mensaje desde Lado Positivo";
-    $body = "Nombre: $nombre\nEmail: $email\nTeléfono: $telefono\nServicio: $servicio\nMensaje: $mensaje";
-    $headers = "From: $email";
+    $contenido = "Nombre: " . $nombre . "\n";
+    $contenido .= "Email: " . $email . "\n";
+    $contenido .= "Celular: " . $celular . "\n";
+    $contenido .= "Servicio: " . $servicio . "\n";
+    $contenido .= "Mensaje: " . $mensaje . "\n";
 
-    // Enviar el correo
-    if (mail($to, $subject, $body, $headers)) {
-        echo "¡Mensaje enviado con éxito!";
+    $cabeceras = "From: " . $email . "\r\n";
+    $cabeceras .= "Reply-To: " . $email . "\r\n";
+
+    if (mail($para, $asunto, $contenido, $cabeceras)) {
+        header("Location: index.html?status=success");
+        exit();
     } else {
-        echo "Error al enviar el mensaje.";
+        header("Location: index.html?status=error");
+        exit();
     }
 }
 ?>
