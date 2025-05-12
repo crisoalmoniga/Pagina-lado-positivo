@@ -301,6 +301,36 @@ header div strong {
   border-radius: 12px;
 }
 
+@media (max-width: 768px) {
+  .tarjeta-servicio img, .tarjeta-header img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .whatsapp-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .stat-boxes img {
+    width: 80%;
+    max-width: 150px;
+  }
+
+  .hero-image img {
+    width: 90%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .etapa img {
+    width: 70%;
+    max-width: 200px;
+    margin: auto;
+  }
+}
+
+
 .tarjeta-info {
   flex: 1;
   display: flex;
