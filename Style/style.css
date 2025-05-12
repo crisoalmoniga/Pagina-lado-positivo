@@ -289,6 +289,9 @@ header div strong {
     padding: 4rem 2rem;
     text-align: center;
     margin: 2rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .services-section h2 {
@@ -303,13 +306,13 @@ header div strong {
     font-size: 1rem;
   }
 
-  .services-grid {
+.services-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin-top: 1rem;
-  }
+    margin: auto; /* Asegura el centrado */
+}
   .service-box {
     background: var(--color-accent);
     color: #000;
