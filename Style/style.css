@@ -116,6 +116,32 @@ header div strong {
   border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .boton-cta, .interest-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+    max-width: 90%;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .services-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-section p {
+    font-size: 0.9rem;
+  }
+}
+
+
 .badge {
   display: inline-block;
   background: #1a1a1a;
