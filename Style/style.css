@@ -788,6 +788,36 @@ section.como-trabajamos {
     font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .contacto-formulario {
+    padding: 1rem;
+  }
+
+  .contacto-formulario form {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .contacto input, 
+  .contacto textarea, 
+  .contacto select {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .contacto-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+  }
+
+  .terminos {
+    font-size: 0.85rem;
+  }
+}
+
+
 .contacto input::placeholder, 
 .contacto textarea::placeholder {
     color: #aaa;
