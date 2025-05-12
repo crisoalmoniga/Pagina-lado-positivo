@@ -632,9 +632,10 @@ section.como-trabajamos {
 
 @media (max-width: 768px) {
   .caracteristicas-servicio {
-    flex-direction: row;
-    gap: 1rem;
+    justify-content: center; /* Cambiado de space-around a center */
+    gap: 0.5rem;
     padding: 0.75rem;
+    margin: auto; /* Asegura que el contenedor esté centrado */
   }
 
   .caracteristica {
