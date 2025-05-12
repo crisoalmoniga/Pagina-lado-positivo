@@ -379,7 +379,7 @@ header div strong {
   .tarjeta-header,
   .caracteristicas-servicio,
   .detalles-adicionales {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     text-align: center;
   }
