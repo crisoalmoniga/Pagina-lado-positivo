@@ -9,19 +9,20 @@
 </head>
 <body>
   <!-- Encabezado con navegación -->
-  <header>
+<header>
     <div class="logo-container">
-      <img src="../img/logo.png" alt="Logo Lado Positivo" class="logo">
-      <strong>Lado Positivo</strong>
+        <img src="../img/logo.png" alt="Lado Positivo" class="logo">
+        <strong>Lado Positivo</strong>
     </div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#como-trabajamos">Cómo trabajamos</a>
-      <a href="#contacto">Contacto</a>
+    <nav class="nav-links" id="navMenu">
+         <a href="#inicio">Inicio</a>
+         <a href="#servicios">Servicios</a>
+         <a href="#como-trabajamos">Cómo trabajamos</a>
+         <a href="#contacto">Contacto</a>
     </nav>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-  </header>
+    <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">&#9776;</div>
+</header>
+
 
   <!-- Sección de Inicio -->
   <section id="inicio" class="hero-section">
@@ -317,10 +318,10 @@
     <img src="../img/logo-wp.png" alt="WhatsApp" class="whatsapp-icon">
   </a>  
 
-  <script>
+<script>
 function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('show');
 }
 </script>
 </body>
