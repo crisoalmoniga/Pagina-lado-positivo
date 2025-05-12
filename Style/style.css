@@ -632,7 +632,7 @@ section.como-trabajamos {
 
 @media (max-width: 768px) {
   .caracteristicas-servicio {
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     padding: 0.75rem;
   }
