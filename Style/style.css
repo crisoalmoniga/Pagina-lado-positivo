@@ -24,6 +24,38 @@ body {
   font-family: var(--font-main);
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .services-section, .como-trabajamos, .contacto {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .stat-boxes {
+    gap: 1rem;
+  }
+
+  .stat {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
