@@ -92,6 +92,36 @@ header div strong {
     height: auto;
   }  
   
+  @media (max-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 30px;
+    height: auto;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  header nav a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .logo-container {
+    flex: 1;
+  }
+
+  header div strong {
+    font-size: 1.3rem;
+  }
+}
+
 
 
 .hero-section {
