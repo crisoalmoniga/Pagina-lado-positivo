@@ -819,14 +819,17 @@ section.como-trabajamos {
 }
 
 .caracteristicas-servicio {
-    flex: 1;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alinea verticalmente */
+    gap: 1rem;
     background: #222;
     padding: 1rem;
+    margin: auto; /* Asegura el centrado */
     border-radius: 8px;
+    max-width: 100%; /* Asegura que el bloque no exceda el ancho */
 }
+
 
 .caracteristica {
     text-align: center;
