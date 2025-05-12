@@ -820,16 +820,18 @@ section.como-trabajamos {
 
 .caracteristicas-servicio {
     display: flex;
-    justify-content: center; /* Centra el contenido */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     background: #222;
     padding: 1rem;
-    margin: auto; /* Asegura el centrado */
+    margin: auto;
     border-radius: 8px;
-    max-width: 100%; /* Asegura que el bloque no exceda el ancho */
+    max-width: 100%; 
+    overflow-wrap: break-word; /* Rompe palabras largas */
+    word-wrap: break-word; /* Compatibilidad adicional */
+    word-break: break-word; /* Asegura el corte de palabras */
 }
-
 
 .caracteristica {
     text-align: center;
@@ -841,6 +843,17 @@ section.como-trabajamos {
     font-weight: bold;
     color: var(--color-accent);
     display: block;
+    font-size: 1.1rem; /* Ajusta el tamaño para que no desborde */
+}
+
+@media (max-width: 768px) {
+    .caracteristica span {
+        font-size: 0.9rem; /* Reduce el tamaño en dispositivos móviles */
+    }
+
+    .caracteristica p {
+        font-size: 0.85rem;
+    }
 }
 
 .caracteristicas-servicio div + div {
