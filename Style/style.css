@@ -60,8 +60,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  gap: 1rem; /* Ajuste de espacio entre logo y menú */
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 35px;
+  height: auto;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem; /* Reduce el espacio entre los enlaces */
+}
+
 
 header nav a {
   margin-left: 1.5rem;
@@ -145,6 +163,30 @@ header div strong {
   /* Textos de Estadísticas */
   .stat span {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    margin-top: 0.5rem;
+    gap: 0.75rem; /* Menos espacio entre los elementos del menú */
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 30px;
+  }
+
+  header div strong {
+    font-size: 1.2rem;
   }
 }
 
