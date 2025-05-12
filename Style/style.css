@@ -887,14 +887,16 @@ section.como-trabajamos {
   .contacto-header h2 {
     font-size: 1.8rem;
   }
+
+  .contacto-header p {
+    font-size: 1rem;
+  }
+
+  .contacto-header::before {
+    font-size: 1.5rem;
+  }
 }
 
-
-.contacto-header p {
-    font-size: 1.2rem;
-    color: #aaa;
-    margin: 0.5rem 0 1.5rem;
-}
 
 .contacto-formulario {
     display: flex;
