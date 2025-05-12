@@ -114,6 +114,41 @@ header div strong {
   font-weight: 800;
 }
 
+@media (max-width: 768px) {
+  /* Títulos Principales */
+  .hero-text h1, .services-section h2, .contacto-header h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .tarjeta-titulo h3, .cta-final h3, .etapa h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Párrafos y Descripciones */
+  .hero-text p, .services-section p, .tarjeta-descripcion p, .detalle p {
+    font-size: 0.9rem;
+  }
+
+  /* Botones */
+  .boton-cta, .interest-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    max-width: 100%;
+  }
+
+  /* Iconos dentro de botones */
+  .boton-cta::before, .interest-btn::before {
+    font-size: 1.2rem;
+  }
+
+  /* Textos de Estadísticas */
+  .stat span {
+    font-size: 0.85rem;
+  }
+}
+
+
 .hero-text h1 span {
   color: var(--color-accent);
 }
