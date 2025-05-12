@@ -284,6 +284,22 @@ header div strong {
     color: #000;
   }
 
+  @media (max-width: 768px) {
+  .service-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-box p {
+    font-size: 0.8rem;
+  }
+
+  .service-box {
+    padding: 1.5rem;
+    width: 200px;
+  }
+}
+
+
   .service-box p {
     font-size: 0.75rem;
     color: #ffffff;
