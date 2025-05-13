@@ -758,7 +758,7 @@ img {
 }
 
 .step-text {
-  line-height: 0.7;         /* reduce el interlineado entre strong y small */
+  line-height: 1.2;         /* reduce el interlineado entre strong y small */
 }
 
 
