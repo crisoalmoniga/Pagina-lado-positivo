@@ -1069,10 +1069,10 @@ img {
     flex-direction: column;
     gap: 2rem;
   }
-  .timeline li::before,
+  /*.timeline li::before,
   .timeline li::after {
     display: none;
-  }
+  }*/
 
   /* —— CONTACTO —— */
   .contact-container {
