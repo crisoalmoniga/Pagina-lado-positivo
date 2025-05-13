@@ -80,7 +80,7 @@
         Ideal para campañas de marketing, landing page que convierte visitantes en clientes
         potenciales con diseño cautivador y contenido optimizado para la conversión.
       </p>
-      <button class="interest-btn">¡Me interesa! →</button>
+      <button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
     </div>
   </div>
 
@@ -119,7 +119,7 @@
         Potenciá la imagen de tu negocio con una web que inspire confianza, refleje la identidad de tu marca y conecte con tu audiencia.
         Una web institucional ofrece una presencia profesional en línea, destacando los valores y servicios de tu empresa mientras facilita el contacto directo con tus clientes.
       </p>
-      <button class="interest-btn">¡Me interesa! →</button>
+      <button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
     </div>
   </div>
 
@@ -158,7 +158,7 @@
         Diseñada para facilitar la navegación, compra y pago en línea.
          Ideal para empresas que desean aumentar sus ventas con una tienda online profesional, optimizada y fácil de usar.
       </p>
-      <button class="interest-btn">¡Me interesa! →</button>
+      <button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
     </div>
   </div>
 
@@ -195,7 +195,7 @@
         Aseguramos el buen funcionamiento y la seguridad de tu página, con un mantenimiento constante que evita problemas y mantiene tu web al día.
         El mantenimiento web garantiza la estabilidad y el rendimiento continuo de tu sitio, protegiéndolo de vulnerabilidades y errores.
       </p>
-      <button class="interest-btn">¡Me interesa! →</button>
+      <button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
     </div>
   </div>
 
@@ -221,79 +221,79 @@
 
 
   <!-- Cómo trabajamos -->
-  <section id="como-trabajamos" class="como-trabajamos">
-    <h2>¿Cómo trabajamos?</h2>
-    <p>Al mejor estilo Lado Positivo</p>
-    <div class="etapas">
-      <div class="etapa">
-        <h3>Etapa 01</h3>
-        <h4>Estrategia y planificación</h4>
-        <p>Conocemos tus metas, exploramos tu marca y planificamos la web ideal para tu negocio, alineada a tus valores y personalidad.</p>
+<section id="como-trabajamos" class="timeline-section">
+  <h2>Nuestro camino hacia <em>tu éxito</em></h2>
+  <p class="timeline-subtitle">
+    Recorramos juntos el camino que convierte tus ideas en proyectos reales
+  </p>
+
+  <ul class="timeline">
+    <li>
+      <span class="step-number">01</span>
+      <div class="step-text">
+        <strong>Estrategia</strong><br>
+        <small>que conecta.</small>
       </div>
-      <div class="etapa">
-        <h3>Etapa 02</h3>
-        <h4>Comunicación y diseño</h4>
-        <p>Desarrollamos una comunicación clara, un diseño atractivo con un prototipo interactivo para validar ideas.</p>
+    </li>
+    <li>
+      <span class="step-number">02</span>
+      <div class="step-text">
+        <strong>Diseño</strong><br>
+        <small>que cautiva.</small>
       </div>
-      <div class="etapa">
-        <h3>Etapa 03</h3>
-        <h4>Desarrollo y lanzamiento</h4>
-        <p>Aplicamos ajustes finales, desarrollamos tu web y la lanzamos asegurando funcionalidad y éxito.</p>
+    </li>
+    <li>
+      <span class="step-number">03</span>
+      <div class="step-text">
+        <strong>Desarrollo</strong><br>
+        <small>que impulsa.</small>
       </div>
-    </div>
-    <div class="cta-final">
-      <h3>¿Qué estás esperando? Demos el siguiente paso... ¡Juntos!</h3>
-      <button class="interest-btn" onclick="location.href='#contacto'">¡Empezá tu proyecto!</button>
-    </div>
-  </section>
+    </li>
+  </ul>
+</section>
+
 
   <!-- Contacto -->
-  <section id="contacto" class="contacto">
-    <div class="contacto-header">
+<!-- Antes: <section id="contacto" class="contacto"> … -->
+<section id="contacto" class="contacto">
+  <div class="contact-container">
+    <!-- Columna izq: texto -->
+    <div class="contact-text">
+      <div class="contacto-header">
         <h2>Hablemos sobre tu proyecto</h2>
-        <p>Completa tus datos y dejá tu consulta. ¡Estamos listos para ayudarte a llevar tus ideas a la realidad!</p>
+        <p>Complétá tus datos y dejá tu consulta. ¡Estamos listos para ayudarte a llevar tus ideas a la realidad!</p>
+      </div>
     </div>
-    <div class="contacto-formulario">
-        <form action="enviar.php" method="post">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="telefono" placeholder="Número Celular">
-            <select name="servicio" required>
-                <option value="" disabled selected>Elegí el servicio que deseas</option>
-                <option value="landing">Landing Page</option>
-                <option value="web-institucional">Web Institucional</option>
-                <option value="tienda-online">Tienda Online</option>
-                <option value="mantenimiento">Mantenimiento</option>
-            </select>
-            <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-            <div class="terminos">
-                <input type="checkbox" required>
-                <label>Acepto Términos y Condiciones</label>
-            </div>
-            <button class="contacto-btn" type="submit">Enviar mensaje</button>
-        </form>
+    <!-- Columna der: formulario -->
+    <div class="contact-form">
+      <form action="enviar.php" method="post" class="contacto-formulario">
+        <div class="form-group"><input type="text" name="nombre" placeholder="Nombre" required></div>
+        <div class="form-group"><input type="email" name="email" placeholder="Email" required></div>
+        <div class="form-group"><input type="tel" name="telefono" placeholder="Número celular"></div>
+        <div class="form-group"><select name="servicio" required>
+          <option value="" disabled selected>Elegí el servicio que deseas</option>
+          <option value="landing">Landing Page</option>
+          <option value="web">Web Institucional</option>
+          <option value="tienda">Tienda Online</option>
+          <option value="mantenimiento">Mantenimiento</option>
+        </select></div>
+        <div class="form-group form-group--full"><textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea></div>
+        <div class="form-group form-group--full checkbox-group">
+        <!-- Formulario – checkbox al final del texto -->
+        <label class="checkbox-group">
+            Acepto Términos y Condiciones
+            <input type="checkbox" required>
+        </label>
+
+        </div>
+        <div class="form-group action-group">
+          <button type="submit" class="contacto-btn">Enviar mensaje</button>
+        </div>
+      </form>
     </div>
+  </div>
+</section>
 
-    <div id="mensaje-exito" class="mensaje oculto">
-        ¡Mensaje enviado con éxito!`
-    </div>
-    <div id="mensaje-error" class="mensaje oculto">
-        Hubo un problema al enviar el mensaje. Inténtalo nuevamente.
-    `</div>
-
-    <script>
-        // Mostrar el mensaje según el parámetro en la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-    
-        if (status === 'success') {
-            document.getElementById('mensaje-exito').classList.remove('oculto');
-        } else if (status === 'error') {
-            document.getElementById('mensaje-error').classList.remove('oculto');
-        }
-    </script>
-
-  </section>
 
   <!-- Footer -->
   <footer>

@@ -730,3 +730,349 @@ img {
     width: 100%;
     border-radius: 16px;
 }
+
+/* =================== TIMELINE “CÓMO TRABAJAMOS” – AJUSTADO =================== */
+.timeline-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.timeline-section h2 em {
+  font-style: italic;
+}
+
+.timeline-subtitle {
+  margin-top: 0.5rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+/* Contenedor: tres items repartidos y centrados */
+.timeline {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 800px;  /* o el ancho que quieras */
+}
+
+/* Cada paso ocupa 1/3 y está centrado */
+.timeline li {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 1rem; /* espacio para el punto y la barra */
+}
+
+/* Número grande en verde */
+.step-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+/* Texto del paso */
+.step-text {
+  line-height: 1.2;
+}
+.step-text strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+.step-text small {
+  display: block;
+  color: var(--color-text);
+  opacity: 0.8;
+  font-size: 0.875rem;
+}
+
+/* ——— Punto blanco ——— */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--color-text);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* ——— Barra blanca ——— */
+.timeline li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  /* el ancho: hasta el siguiente punto: */
+  width: calc(100% - 12px);
+  height: 4px;
+  background: var(--color-text);
+  transform: translateX(6px) translateY(-50%);
+  z-index: 1;
+}
+
+/* Reduce el espacio entre el texto en negrita y la línea de abajo */
+.step-number {
+  margin-bottom: 0.1rem;    /* menos aire tras el número verde */
+}
+
+.step-text {
+  line-height: 0.7;         /* reduce el interlineado entre strong y small */
+}
+
+
+/* Mobile: apilar y esconder puntos y barras */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .timeline li::before,
+  .timeline li::after {
+    display: none;
+  }
+}
+
+/* ========== CONTACT-CONTAINER: DOS COLUMNAS ========== */
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.contact-text {
+  flex: 1 1 400px;      /* ocupa la columna izquierda */
+  color: var(--color-text);
+}
+
+.contact-text h2 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-text p {
+  line-height: 1.6;
+}
+
+/* Ajusta al ancho deseado del formulario */
+.contact-form {
+  flex: 1 1 400px;      /* ocupa la columna derecha */
+}
+
+/* Reusa tus estilos de .contacto-formulario, .form-group, .contacto-btn, etc. */
+
+/* Responsive: en móviles apila columnas */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .contact-form,
+  .contact-text {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+/* === Botón “Enviar mensaje” con mismo estilo de “Me interesa” === */
+.contacto-btn {
+  display: inline-block;
+  background-color: var(--color-accent);  /* mismo verde */
+  color: var(--color-bg);                  /* texto negro */
+  padding: 15px 40px;                      /* mismo acolchamiento */
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: none;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin-top: 1.5rem;                     /* ajusta espacio sobre el botón */
+}
+
+.contacto-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ========== ESTILO FORMULARIO – FONDO GRIS + CUADRO OSCURO ========== */
+
+/* Fondo gris oscuro para toda la sección de contacto */
+#contacto.contacto {
+  background-color: #1a1a1a; /* mismo gris de “Soluciones web a medida” */
+  padding: 1px 20px;        /* ajusta según gustes */
+}
+
+/* Cuadro interno negro para el formulario */
+.contacto-formulario {
+  background-color: var(--color-bg); /* negro puro */
+  padding: 40px 30px;                /* espacio interior generoso */
+  border-radius: 16px;               /* esquinas redondeadas */
+  max-width: 600px;                  /* ancho máximo */
+  margin: 0 auto;                    /* centrar en desktop */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Dale contraste a los inputs/textarea dentro del cuadro */
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+  background-color: #1a1a1a;         /* igual al gris de fondo de la sección */
+  border: 1px solid var(--color-accent);
+  color: var(--color-text);
+}
+
+/* Centrar formulario y texto en mobile */
+@media (max-width: 768px) {
+  .contacto-formulario {
+    margin: 0 10px;
+  }
+}
+
+/* ========== AJUSTES FINOS FORMULARIO ========== */
+
+/* 1. Ajusta el padding del contenedor y su sombra */
+.contacto-formulario {
+  padding: 30px;                          /* un poco menos de acolchamiento */
+  border-radius: 12px;                    /* esquinas más suaves */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  max-width: 550px;                       /* ancho unificado */
+  margin-left: auto;                      /* ya está a la derecha, pero por si acaso */
+}
+
+/* 2. Espaciado interno de cada campo */
+.contacto-formulario .form-group {
+  margin-bottom: 1rem;                    /* más separación entre campos */
+}
+
+/* 3. Inputs y textarea más ‘ligeros’ */
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+  padding: 0.75rem 1rem;                  /* alturas consistentes en todos */
+  border: 1px solid rgba(51, 255, 178, 0.7); /* borde verde más suave */
+  background-color: #121212;              /* matiz ligeramente distinto del negro puro */
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.contacto-formulario .checkbox-group {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start; /* fuerza todo al inicio (izquierda) */
+  gap: 0.4rem;                  /* espacio entre casilla y texto */
+  margin-bottom: 0.5rem;       /* conserva un poco de separación abajo */
+}
+
+.contacto-formulario .checkbox-group input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;                    /* elimina márgenes extra */
+  vertical-align: middle;
+  flex-shrink: 0;               /* no se encoge */
+}
+
+/* 5. Botón “Enviar mensaje” igual que “Me interesa” */
+.contacto-formulario .contacto-btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-top: 1rem;
+  transition: transform 0.2s ease;
+}
+.contacto-formulario .contacto-btn:hover {
+  transform: scale(1.05);
+}
+
+/* 6. Titular y texto de la izquierda, que respiren más */
+#contacto .contacto-header {
+  margin-bottom: 2rem;
+}
+#contacto .contacto-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+#contacto .contacto-header p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* 7. Ajusta el gap general entre texto y formulario */
+#contacto .contacto {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;        /* más separación horizontal */
+}
+@media (max-width: 768px) {
+  #contacto .contacto {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* ================== AJUSTES FINALES DE CONTACTO ================== */
+
+/* 1. Empuja el texto principal un poquito hacia abajo y haz el H2 un poco más grande */
+.contact-text h2 {
+  margin-top: 5.5rem;      /* baja el título */
+  font-size: 2.25rem;      /* agranda levemente */
+}
+.contact-text p {
+  margin-top: 0.5rem;      /* separa párrafo del título */
+}
+
+/* 2. Ajusta el gap vertical entre cada campo del formulario */
+.contacto-formulario .form-group {
+  margin-bottom: 0.1rem;  /* menos espacio entre inputs */
+}
+
+/* 3. Reduce el interlineado (line-height) dentro de los inputs y textarea */
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+  line-height: 1.3;        /* más compacto */
+}
+
+/* 4. Si quieres bajar aún más el espacio entre el legend "Aceptar…" y el checkbox */
+.checkbox-group {
+  gap: 0.25rem;            /* menos separación horizontal */
+}
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+}
+.checkbox-group input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;               /* se pega al texto */
+}
+
+/* ========== AJUSTE “NOSOTRO CAMINO…” ========== */
+.timeline-section h2 {
+  font-size: 2.5rem;        /* antes 2rem, lo dejamos más grande */
+  line-height: 1.2;         /* compacta un poco el interlineado */
+  margin-bottom: 0.5rem;    /* separa justo lo necesario del subtítulo */
+}
+
+.timeline-section p {
+  font-size: 1.125rem;      /* aumenta ligeramente el párrafo */
+  margin-bottom: 2rem;      /* añade un poco de espacio antes de la línea de pasos */
+}
