@@ -1077,7 +1077,7 @@ img {
 
     .timeline li:not(:last-child)::after {
     left: 50%;
-    width: calc(100% + 12px);
+    width: calc(100% + 62px);
     transform: translateX(-6px) translateY(-50%);
   }
   /*.timeline li::before,
