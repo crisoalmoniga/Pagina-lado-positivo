@@ -1066,8 +1066,13 @@ img {
 
   /* —— TIMELINE “CÓMO TRABAJAMOS” —— */
   .timeline {
-    flex-direction: column;
+    flex-direction: row;
+        overflow-x: auto; 
     gap: 2rem;
+  }
+
+    .timeline li {
+    flex: 0 0 auto;             /* cada paso ocupa sólo su ancho */
   }
   /*.timeline li::before,
   .timeline li::after {
