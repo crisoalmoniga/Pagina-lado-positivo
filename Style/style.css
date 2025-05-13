@@ -82,6 +82,31 @@ header {
     cursor: pointer;
 }
 
+/* =================== NAVEGACIÓN RESPONSIVA =================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--color-bg);
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+}
+
 
 /* =================== LOGO =================== */
 .logo-container strong {
@@ -294,31 +319,6 @@ header {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-@media (max-width: 768px) {
-    .services-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .service-box {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .service-box h3 {
-        font-size: 1.2rem;
-    }
-
-    .service-box p {
-        font-size: 0.9rem;
-    }
-}
-
-
-
 
 /* ================ LANDING PAGE OVERRIDES ================ */
 .landing-section {
@@ -555,42 +555,11 @@ header {
     padding: 20px;
 }
 
-/*=================TARJETAS DE SERVICIO ===================*/
-
-@media (max-width: 768px) {
-    .landing-content, .institutional-content, .tienda-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .landing-image, .institutional-image, .tienda-image {
-        margin: 1rem 0;
-    }
-
-    .landing-text, .institutional-text {
-        text-align: center;
-    }
-}
 
 /* =================== CÓMO TRABAJAMOS =================== */
 .como-trabajamos {
     padding: 40px;
 }
-
-@media (max-width: 768px) {
-    .timeline {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-    }
-
-    .timeline li {
-        text-align: center;
-        margin: 0;
-    }
-}
-
 
 /* =================== FORMULARIO DE CONTACTO =================== */
 .contacto-formulario input, .contacto-formulario textarea {
@@ -609,30 +578,6 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        padding: 2rem 1rem;
-        gap: 1rem;
-    }
-
-    .contact-form, .contact-text {
-        width: 100%;
-        text-align: center;
-    }
-
-    .contacto-formulario input, .contacto-formulario textarea {
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
-
-    .contacto-btn {
-        width: 100%;
-        font-size: 1.1rem;
-    }
-}
-
-
 /* =================== FOOTER =================== */
 footer {
     background-color: var(--color-bg);
@@ -640,15 +585,6 @@ footer {
     text-align: center;
     padding: 20px;
 }
-
-@media (max-width: 768px) {
-    footer {
-        padding: 1.5rem;
-        font-size: 0.875rem;
-        text-align: center;
-    }
-}
-
 
 /* =================== BOTÓN WHATSAPP AJUSTADO =================== */
 .whatsapp-btn {
