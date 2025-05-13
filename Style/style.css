@@ -1151,3 +1151,56 @@ img {
   font-size: 1.125rem;      /* aumenta ligeramente el párrafo */
   margin-bottom: 2rem;      /* añade un poco de espacio antes de la línea de pasos */
 }
+
+/* ========== RESPONSIVE: hasta 768px ========== */
+@media (max-width: 768px) {
+  /* Header */
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Servicios: pasar a columna */
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .service-box {
+    max-width: 100%;
+  }
+
+  /* Landing, Institucional, Tienda, Mantenimiento */
+  .landing-content,
+  .institutional-content,
+  .tienda-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Feature cards inferiores */
+  .landing-features,
+  .institutional-features {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Contacto: apilar columnas */
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  /* Timeline: apilar pasos y ocultar líneas */
+  .timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .timeline li::before,
+  .timeline li::after {
+    display: none;
+  }
+}
