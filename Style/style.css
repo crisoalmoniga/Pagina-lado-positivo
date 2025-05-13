@@ -82,68 +82,6 @@ header {
     cursor: pointer;
 }
 
-/* ========= MOBILE (≤768px) ========= */
-@media (max-width: 768px) {
-  /* Asegúrate de que el header sea relativo para posicionar la nav dentro */
-  header {
-    position: relative;
-    flex-direction: row;       /* volvemos al row para no apilar logo y menú */
-    padding: 0.5rem 1rem;
-  }
-
-  /* Icono de menú: visible y a la derecha */
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  /* Logo centrado en header */
-  .logo-container {
-    margin: 0 auto;
-  }
-
-  /* Nav flotante, fuera del flujo, oculta por defecto */
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;         /* justo debajo del header */
-    left: 0;
-    width: 100%;
-    background: var(--color-bg);
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-    z-index: 999;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-
-  /* Enlaces verticales y centrados */
-  .nav-links a {
-    color: var(--color-accent);
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-  }
-
-  /* Evita que el hero-text cambie de tamaño */
-  .hero-section {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-}
-
-
-
 /* =================== LOGO =================== */
 .logo-container strong {
   color: var(--color-accent); /* verde neón */
@@ -459,14 +397,6 @@ header {
   color: var(--color-text);
 }
 
-/* ===== Responsive ===== */
-/* Forzar imagen a la derecha en desktop */
-@media (min-width: 769px) {
-  .landing-content {
-    flex-direction: row-reverse;
-  }
-}
-
   .landing-features {
     flex-direction: column;
     gap: 12px;
@@ -480,29 +410,9 @@ header {
   line-height: 1.6;
 }
 
-/* (El resto de tu CSS para .landing-features ya lo tienes) */
-
-/* Responsive móviles */
-@media (max-width: 768px) {
-  .landing-content {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  .landing-top-features,
-  .landing-features {
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-
 /* =================== WEB INSTITUCIONAL – ESTRUCTURA =================== */
 .web-institucional-section {
   padding: 120px 20px 80px;
-}
-@media (min-width: 1200px) {
-  .web-institucional-section {
-    padding: 120px 80px 80px;
-  }
 }
 
 .institutional-content {
@@ -534,8 +444,6 @@ header {
   line-height: 1.4;
   text-align: left;
 }
-
-
 
 /* Feature-cards inferiores */
 .institutional-features {
@@ -621,22 +529,6 @@ footer {
   height: 100%;
 }
 
-
-/* =================== RESPONSIVE =================== */
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links a {
-        display: block;
-        padding: 5px;
-    }
-}
-
 /* =================== COHERENCIA EN IMÁGENES =================== */
 img {
     max-width: 100%;       /* nunca excede el ancho del contenedor */
@@ -697,11 +589,6 @@ img {
   /* Mismos márgenes que el Hero */
   padding: 120px 20px 80px;
 }
-@media (min-width: 1200px) {
-  .landing-section {
-    padding: 120px 80px 80px;
-  }
-}
 
 /* Fuerza las feature-cards a mantenerse en fila */
 .landing-features {
@@ -718,11 +605,6 @@ img {
 /* =================== LANDING CONTENT (márgenes iguales al Hero) =================== */
 .landing-section {
   padding: 120px 20px 80px;       /* mismo acolchamiento que el Hero */
-}
-@media (min-width: 1200px) {
-  .landing-section {
-    padding: 120px 80px 80px;    /* igual que el Hero en pantallas grandes */
-  }
 }
 
 .landing-content {
@@ -880,18 +762,6 @@ img {
 }
 
 
-/* Mobile: apilar y esconder puntos y barras */
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .timeline li::before,
-  .timeline li::after {
-    display: none;
-  }
-}
-
 /* ========== CONTACT-CONTAINER: DOS COLUMNAS ========== */
 .contact-container {
   display: flex;
@@ -922,18 +792,6 @@ img {
 
 /* Reusa tus estilos de .contacto-formulario, .form-group, .contacto-btn, etc. */
 
-/* Responsive: en móviles apila columnas */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-  .contact-form,
-  .contact-text {
-    flex: unset;
-    width: 100%;
-  }
-}
 
 /* === Botón “Enviar mensaje” con mismo estilo de “Me interesa” === */
 .contacto-btn {
@@ -982,12 +840,6 @@ img {
   color: var(--color-text);
 }
 
-/* Centrar formulario y texto en mobile */
-@media (max-width: 768px) {
-  .contacto-formulario {
-    margin: 0 10px;
-  }
-}
 
 /* ========== AJUSTES FINOS FORMULARIO ========== */
 
@@ -1068,12 +920,6 @@ img {
   align-items: flex-start;
   gap: 20px;        /* más separación horizontal */
 }
-@media (max-width: 768px) {
-  #contacto .contacto {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
 
 /* ================== AJUSTES FINALES DE CONTACTO ================== */
 
@@ -1125,48 +971,100 @@ img {
 }
 
 /* ========== RESPONSIVE: hasta 768px ========== */
+
+/* ========== RESPONSIVE GENERAL ========== */
 @media (max-width: 768px) {
-  /* Header */
+  /* —— HEADER & NAV —— */
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-bg);
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    margin: 0.25rem 0;
+  }
+
+  /* —— HERO / INICIO —— */
   .hero-section {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  .hero-image {
+    justify-content: center;
   }
 
-  /* Servicios: pasar a columna */
+  /* —— SECCIÓN SERVICIOS (grid → columna) —— */
   .services-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .service-box {
-    max-width: 100%;
+    grid-template-columns: 1fr;
   }
 
-  /* Landing, Institucional, Tienda, Mantenimiento */
+  /* —— TARJETAS DE SERVICIO (Landing, Institucional, Tienda, Mantenimiento) —— */
   .landing-content,
   .institutional-content,
-  .tienda-content {
+  .tienda-content,
+  .maintenance-content {
     flex-direction: column;
     text-align: center;
-    align-items: center;
     gap: 20px;
   }
-
-  /* Feature cards inferiores */
+  /* Asegura que cada listado de “features” apile */
   .landing-features,
-  .institutional-features {
+  .institutional-features,
+  .tienda-features,      /* si tu tienda usa clase distinta */
+  .maintenance-features { /* si tu mantenimiento usa clase distinta */
+    display: flex;
     flex-direction: column;
     gap: 12px;
   }
 
-  /* Contacto: apilar columnas */
-  .contact-container {
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px 20px;
-  }
-
-  /* Timeline: apilar pasos y ocultar líneas */
+  /* —— TIMELINE “CÓMO TRABAJAMOS” —— */
   .timeline {
     flex-direction: column;
     gap: 2rem;
@@ -1174,5 +1072,23 @@ img {
   .timeline li::before,
   .timeline li::after {
     display: none;
+  }
+
+  /* —— CONTACTO —— */
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .contact-form,
+  .contact-text {
+    width: 100%;
+  }
+}
+
+/* Opcional: ajustes extra para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .nav-links a {
+    padding: 0.5rem;
   }
 }
