@@ -1074,6 +1074,12 @@ img {
     .timeline li {
     flex: 0 0 auto;             /* cada paso ocupa sólo su ancho */
   }
+
+    .timeline li:not(:last-child)::after {
+    left: 50%;
+    width: 100%;
+    transform: translateX(0) translateY(-50%);
+  }
   /*.timeline li::before,
   .timeline li::after {
     display: none;
