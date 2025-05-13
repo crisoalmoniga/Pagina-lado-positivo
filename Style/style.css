@@ -84,79 +84,63 @@ header {
 
 /* ========= MOBILE (≤768px) ========= */
 @media (max-width: 768px) {
-  /* Header apilado */
+  /* Asegúrate de que el header sea relativo para posicionar la nav dentro */
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 20px;
+    position: relative;
+    flex-direction: row;       /* volvemos al row para no apilar logo y menú */
+    padding: 0.5rem 1rem;
   }
 
-  /* Logo centrado */
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Icono de menú visible, alineado a la derecha */
+  /* Icono de menú: visible y a la derecha */
   .menu-icon {
     display: block;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
     font-size: 1.5rem;
-    align-self: flex-end;
     cursor: pointer;
   }
 
-  /* Nav inicialmente oculta, luego al hacer .show aparece */
+  /* Logo centrado en header */
+  .logo-container {
+    margin: 0 auto;
+  }
+
+  /* Nav flotante, fuera del flujo, oculta por defecto */
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;         /* justo debajo del header */
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    background-color: var(--color-bg);
-    padding: 0.5rem 1rem;
-    width: 100%;
-    border-radius: 8px;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    z-index: 999;
   }
   .nav-links.show {
     display: flex;
   }
 
-  /* Enlaces verticales */
+  /* Enlaces verticales y centrados */
   .nav-links a {
     color: var(--color-accent);
-    text-decoration: none;
     font-size: 1.1rem;
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
   }
 
-  /* Ajustes de hero para no solaparse */
+  /* Evita que el hero-text cambie de tamaño */
   .hero-section {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .hero-text h1 {
     font-size: 2rem;
-    line-height: 1.2;
-  }
-  .hero-text p {
-    font-size: 1rem;
-  }
-  .hero-btn {
-    font-size: 1rem;
-    padding: 0.75rem 1.25rem;
-    margin-top: 1rem;
-  }
-
-  /* Logo más pequeño si hace falta */
-  .logo-container img {
-    max-width: 120px;
-    height: auto;
   }
 }
-
 
 
 
