@@ -9,20 +9,20 @@
 </head>
 <body>
   <!-- Encabezado con navegación -->
-<header>
+  <header>
     <div class="logo-container">
-        <img src="../img/logo.png" alt="Lado Positivo" class="logo">
-        <strong>Lado Positivo</strong>
+      <!-- Logo a la izquierda, texto a la derecha -->
+      <img src="../img/logo.png" alt="Logo Lado Positivo" class="logo">
+      <strong>Lado Positivo</strong>
     </div>
     <nav class="nav-links" id="navMenu">
-         <a href="#inicio">Inicio</a>
-         <a href="#servicios">Servicios</a>
-         <a href="#como-trabajamos">Cómo trabajamos</a>
-         <a href="#contacto">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#contacto">Contacto</a>
     </nav>
     <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">&#9776;</div>
-</header>
-
+  </header>
 
   <!-- Sección de Inicio -->
   <section id="inicio" class="hero-section">
@@ -32,143 +32,196 @@
       <button class="hero-btn" onclick="location.href='#servicios'">Conocé nuestros servicios →</button>
     </div>
     <div class="hero-image">
-      <img src="../img/Inicio.png" alt="Diseño Web en acción">
+      <div class="img-wrapper">
+        <img src="../img/Inicio.png" alt="Diseño Web en acción">
+      </div>
     </div>
   </section>
 
-  <section id="servicios" class="services-section">
-    <div class="badge">Servicios</div>
-    <h2>Soluciones web a medida</h2>
-    <p>Conocé nuestras opciones y encontrá el sitio perfecto para impulsar tu marca y cumplir tus objetivos.</p>
-    <div class="services-grid">
-        <div class="service-box">
-            <h3>Landing Page</h3>
-            <p>Captura la atención de tus clientes con páginas enfocadas en conversiones rápidas.</p>
-        </div>
-        <div class="service-box">
-            <h3>Web Institucional</h3>
-            <p>Refuerza tu presencia online con un sitio profesional y bien estructurado.</p>
-        </div>
-        <div class="service-box">
-            <h3>Tienda Online</h3>
-            <p>Facilita la venta de productos con una experiencia de compra intuitiva.</p>
-        </div>
-        <div class="service-box">
-            <h3>Servicio de mantenimiento</h3>
-            <p>Mantén tu web actualizada y segura con monitoreo constante.</p>
-        </div>
+  <!-- Sección de Servicios -->
+<section id="servicios" class="services-section">
+  <div class="badge">Servicios</div>
+  <h2>Soluciones web a medida</h2>
+  <p>Conocé nuestras opciones y encontrá el sitio perfecto para impulsar tu marca y cumplir tus objetivos.</p>
+  <div class="services-grid">
+    <div class="service-box">
+      <h3>Landing Page</h3>
+      <p>Captura la atención de tus clientes con páginas enfocadas en conversiones rápidas.</p>
     </div>
-</section>
-
-
-<section class="tarjeta-servicio">
-  <div class="tarjeta-header">
-      <img src="../img/landing.png" alt="Ejemplo Landing Page" class="tarjeta-imagen">
-      <div class="tarjeta-titulo">
-          <h3>Landing Page</h3>
-          <p>Atraé y convertí visitas en leads con una landing page enfocada en resultados, diseñada para captar la atención y llevar al usuario a la acción.</p>
-      </div>
-  </div>
-
-  <div class="tarjeta-descripcion">
-      <p>Ideal para campañas de marketing, landing page que convierte visitantes en clientes potenciales con diseño cautivador y contenido optimizado para la conversión.</p>
-      <button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
-  </div>
-
-  <div class="detalles-adicionales">
-      <div class="detalle">
-          <h4>¿Tiempo previsto?</h4>
-          <p>Varia según la complejidad del proyecto, normalmente de 2 a 3 semanas.</p>
-      </div>
-      <div class="detalle">
-          <h4>¿En qué se enfoca?</h4>
-          <p>Captura leads y convierte visitantes en clientes.</p>
-      </div>
-      <div class="detalle">
-          <h4>¿Qué incluye?</h4>
-          <p>Análisis de competencia, diseño UX/UI, certificado SSL y más.</p>
-      </div>
+    <div class="service-box">
+      <h3>Web Institucional</h3>
+      <p>Refuerza tu presencia online con un sitio profesional y bien estructurado.</p>
+    </div>
+    <div class="service-box">
+      <h3>Tienda Online</h3>
+      <p>Facilita la venta de productos con una experiencia de compra intuitiva.</p>
+    </div>
+    <div class="service-box">
+      <h3>Servicio de mantenimiento</h3>
+      <p>Mantené tu web actualizada y segura con monitoreo constante.</p>
+    </div>
   </div>
 </section>
 
-<section class="tarjeta-servicio">
-  <div class="tarjeta-header">
-      <div class="tarjeta-titulo">
-          <h3>Web Institucional</h3>
-          <p>Potenciá la imagen de tu negocio con una web que inspire confianza, refleje la identidad de tu marca y conecte con tu audiencia.</p>
-      </div>
-      <img src="../img/institucional.png" alt="Ejemplo Web Institucional" class="tarjeta-imagen">
+
+  <!-- Tarjetas de Servicio -->
+<section id="landing" class="landing-section">
+  <div class="landing-content">
+    <!-- Imagen a la derecha en desktop -->
+    <div class="landing-image img-wrapper">
+      <img src="../img/landing.png" alt="Ejemplo Landing Page">
+    </div>
+    <!-- Texto principal -->
+    <div class="landing-text">
+      <h2>Landing Page</h2>
+      <p class="landing-intro">
+        Atraé y convertí visitas en leads con una landing page enfocada en resultados, diseñada
+        para captar la atención y llevar al usuario a la acción.
+        Ideal para campañas de marketing, landing page que convierte visitantes en clientes
+        potenciales con diseño cautivador y contenido optimizado para la conversión.
+      </p>
+      <button class="interest-btn">¡Me interesa! →</button>
+    </div>
   </div>
 
-  <div class="tarjeta-descripcion">
-      <p>Una web institucional ofrece una presencia profesional en línea, destacando los valores y servicios de tu empresa mientras facilita el contacto directo con tus clientes.</p>
-  </div>
-
-  <div class="detalles-adicionales">
-      <div class="detalle">
-          <h4>¿Tiempo previsto?</h4>
-          <p>De 3 a 4 semanas, según la complejidad.</p>
-      </div>
-      <div class="detalle">
-          <h4>¿En qué se enfoca?</h4>
-          <p>Proyectar confianza y profesionalismo.</p>
-      </div>
-      <div class="detalle">
-          <h4>¿Qué incluye?</h4>
-          <p>Diseño personalizado, integración de contacto y optimización SEO.</p>
-      </div>
-  </div>
-
-  <!-- Botón dentro de su propio contenedor -->
-  <div class="tarjeta-accion">
-<button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
-  </div>
+  <!-- Feature-cards inferiores, ahora centradas en toda la sección -->
+  <ul class="landing-features">
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Tiempo previsto?</h4>
+      <p>Varia según la complejidad del proyecto, normalmente de 2 a 3 semanas.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿En qué se enfoca?</h4>
+      <p>Captura leads y convierte visitantes en clientes.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Qué incluye?</h4>
+      <p>Análisis de competencia, diseño UX/UI, certificado SSL y más.</p>
+    </li>
+  </ul>
 </section>
 
-<section class="tarjeta-servicio">
-  <div class="tarjeta-header">
-      <img src="../img/tienda.png" alt="Ejemplo Tienda Online" class="tarjeta-imagen">
-      <div class="tarjeta-titulo">
-          <h3>Tienda Online</h3>
-          <p>Ofrecé una experiencia de compra fácil y atractiva para que tus clientes puedan navegar, comprar y pagar en línea, con soporte en cada paso.</p>
-      </div>
+
+
+<section id="web-institucional" class="web-institucional-section">
+  <div class="institutional-content">
+    <!-- Imagen a la izquierda -->
+    <div class="institutional-image img-wrapper">
+      <img src="img/institucional.png" alt="Web Institucional">
+    </div>
+    <!-- Texto principal -->
+    <div class="institutional-text">
+      <h2>Web Institucional</h2>
+      <p class="institutional-intro">
+        Potenciá la imagen de tu negocio con una web que inspire confianza, refleje la identidad de tu marca y conecte con tu audiencia.
+        Una web institucional ofrece una presencia profesional en línea, destacando los valores y servicios de tu empresa mientras facilita el contacto directo con tus clientes.
+      </p>
+      <button class="interest-btn">¡Me interesa! →</button>
+    </div>
   </div>
-  <div class="tarjeta-descripcion">
-      <p>Una tienda online facilita la compra de productos con una experiencia amigable y segura, integrando carrito de compras y opciones de pago eficientes.</p>
-<button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
-  </div>
-  <div class="detalles-adicionales">
-      <div class="detalle">
-          <h4>¿Tiempo previsto?</h4>
-          <p>De 4 a 6 semanas, dependiendo de la complejidad.</p>
-      </div>
-      <div class="detalle">
-          <h4>¿En qué se enfoca?</h4>
-          <p>Permitir a los clientes comprar productos de manera rápida y segura.</p>
-      </div>
-      <div class="detalle">
-          <h4>¿Qué incluye?</h4>
-          <p>Catálogo, carrito de compras, integración con envíos y más.</p>
-      </div>
-  </div>
+
+  <!-- Feature-cards inferiores -->
+  <ul class="institutional-features">
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Tiempo previsto?</h4>
+      <p>De 3 a 4 semanas, según la complejidad.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿En qué se enfoca?</h4>
+      <p>Proyectar confianza y profesionalismo.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Qué incluye?</h4>
+      <p>Diseño personalizado, integración de contacto y optimización SEO.</p>
+    </li>
+  </ul>
 </section>
 
-<section class="tarjeta-servicio">
-  <div class="tarjeta-header">
-      <img src="../img/mantenimiento.png" alt="Ejemplo Servicio de Mantenimiento" class="tarjeta-imagen">
-      <div class="tarjeta-titulo">
-          <h3>Servicio de Mantenimiento</h3>
-          <p>Aseguramos el buen funcionamiento y la seguridad de tu página, con un mantenimiento constante que evita problemas y mantiene tu web al día.</p>
-      </div>
+<section id="landing" class="landing-section">
+  <div class="landing-content">
+    <!-- Imagen a la derecha en desktop -->
+    <div class="landing-image img-wrapper">
+      <img src="../img/landing.png" alt="Ejemplo Landing Page">
+    </div>
+    <!-- Texto principal -->
+    <div class="landing-text">
+      <h2>Tineda Online</h2>
+      <p class="landing-intro">
+        Atrévete a convertir tu negocio en una experiencia de compra atractiva
+         con una tienda online enfocada en ventas.
+        Diseñada para facilitar la navegación, compra y pago en línea.
+         Ideal para empresas que desean aumentar sus ventas con una tienda online profesional, optimizada y fácil de usar.
+      </p>
+      <button class="interest-btn">¡Me interesa! →</button>
+    </div>
   </div>
-  <div class="tarjeta-descripcion">
-      <p>El mantenimiento web garantiza la estabilidad y el rendimiento continuo de tu sitio, protegiéndolo de vulnerabilidades y errores.</p>
-<button class="interest-btn" onclick="location.href='#contacto'">¡Me interesa! →</button>
-  </div>
+
+  <!-- Feature-cards inferiores, ahora centradas en toda la sección -->
+  <ul class="landing-features">
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Tiempo previsto?</h4>
+      <p>De 4 a 6 semanas, dependiendo de la complejidad.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿En qué se enfoca?</h4>
+      <p>Permitir a los clientes comprar productos de manera rápida y segura.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Qué incluye?</h4>
+      <p>Catálogo, carrito de compras, integración con envíos y más.</p>
+    </li>
+  </ul>
 </section>
 
-<!-- Cómo trabajamos -->
-<section id="como-trabajamos" class="como-trabajamos">
+<section id="mantenimiento" class="web-institucional-section">
+  <div class="institutional-content">
+    <!-- 1. Imagen a la izquierda -->
+    <div class="institutional-image img-wrapper">
+      <img src="../img/mantenimiento.png" alt="Servicio de Mantenimiento">
+    </div>
+    <!-- 2. Texto a la derecha -->
+    <div class="institutional-text">
+      <h2>Servicio de Mantenimiento</h2>
+      <p class="institutional-intro">
+        Aseguramos el buen funcionamiento y la seguridad de tu página, con un mantenimiento constante que evita problemas y mantiene tu web al día.
+        El mantenimiento web garantiza la estabilidad y el rendimiento continuo de tu sitio, protegiéndolo de vulnerabilidades y errores.
+      </p>
+      <button class="interest-btn">¡Me interesa! →</button>
+    </div>
+  </div>
+
+  <!-- Feature-cards inferiores -->
+  <ul class="institutional-features">
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Tiempo previsto?</h4>
+      <p>De 1 a 2 horas semanales de actualización y revisión.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿En qué se enfoca?</h4>
+      <p>Seguridad, backups y actualizaciones constantes.</p>
+    </li>
+    <li>
+      <div class="feature-icon"></div>
+      <h4>¿Qué incluye?</h4>
+      <p>Monitoreo 24/7, parches de seguridad, y soporte técnico.</p>
+    </li>
+  </ul>
+</section>
+
+
+  <!-- Cómo trabajamos -->
+  <section id="como-trabajamos" class="como-trabajamos">
     <h2>¿Cómo trabajamos?</h2>
     <p>Al mejor estilo Lado Positivo</p>
     <div class="etapas">
@@ -219,16 +272,15 @@
             </div>
             <button class="contacto-btn" type="submit">Enviar mensaje</button>
         </form>
-        
     </div>
 
     <div id="mensaje-exito" class="mensaje oculto">
-        ¡Mensaje enviado con éxito!
+        ¡Mensaje enviado con éxito!`
     </div>
     <div id="mensaje-error" class="mensaje oculto">
         Hubo un problema al enviar el mensaje. Inténtalo nuevamente.
-    </div>
-    
+    `</div>
+
     <script>
         // Mostrar el mensaje según el parámetro en la URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -241,7 +293,7 @@
         }
     </script>
 
-</section>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -251,7 +303,7 @@
   <!-- Botón de WhatsApp -->
   <a href="https://wa.me/5491122504279" class="whatsapp-btn" target="_blank" title="Contactar por WhatsApp">
     <img src="../img/logo-wp.png" alt="WhatsApp" class="whatsapp-icon">
-  </a>  
+  </a>
 
 <script>
 function toggleMenu() {
