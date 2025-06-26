@@ -7,7 +7,7 @@
   <title>Lado Positivo</title>
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../Style/style.css">
+  <link rel="stylesheet" href="Style/style.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
   <header>
     <div class="logo-container">
       <!-- Logo a la izquierda, texto a la derecha -->
-      <img src="../img/logo.png" alt="Logo Lado Positivo" class="logo">
+      <img src="img/logo.png" alt="Logo Lado Positivo" class="logo">
       <strong>Lado Positivo</strong>
     </div>
     <nav class="nav-links" id="navMenu">
@@ -37,7 +37,7 @@
     </div>
     <div class="hero-image">
       <div class="img-wrapper">
-        <img src="../img/Inicio.png" alt="Diseño Web en acción">
+        <img src="img/Inicio.png" alt="Diseño Web en acción">
       </div>
     </div>
   </section>
@@ -73,7 +73,7 @@
     <div class="landing-content">
       <!-- Imagen a la derecha en desktop -->
       <div class="landing-image img-wrapper">
-        <img src="../img/landing.png" alt="Ejemplo Landing Page">
+        <img src="img/landing.png" alt="Ejemplo Landing Page">
       </div>
       <!-- Texto principal -->
       <div class="landing-text">
@@ -153,7 +153,7 @@
     <div class="landing-content">
       <!-- Imagen a la derecha en desktop -->
       <div class="landing-image img-wrapper">
-        <img src="../img/landing.png" alt="Ejemplo Landing Page">
+        <img src="img/landing.png" alt="Ejemplo Landing Page">
       </div>
       <!-- Texto principal -->
       <div class="landing-text">
@@ -192,7 +192,7 @@
     <div class="institutional-content">
       <!-- 1. Imagen a la izquierda -->
       <div class="institutional-image img-wrapper">
-        <img src="../img/mantenimiento.png" alt="Servicio de Mantenimiento">
+        <img src="img/mantenimiento.png" alt="Servicio de Mantenimiento">
       </div>
       <!-- 2. Texto a la derecha -->
       <div class="institutional-text">
@@ -312,11 +312,15 @@
 
   <!-- Botón de WhatsApp -->
   <a href="https://wa.me/5491122504279" class="whatsapp-btn" target="_blank" title="Contactar por WhatsApp">
-    <img src="../img/logo-wp.png" alt="WhatsApp" class="whatsapp-icon">
+    <img src="img/logo-wp.png" alt="WhatsApp" class="whatsapp-icon">
   </a>
 
-<!-- Al final de tu index.html, antes del </body> -->
 <script>
+  function toggleMenu() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("show");
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     // 1) Creamos el div de aviso
     const aviso = document.createElement('div');
